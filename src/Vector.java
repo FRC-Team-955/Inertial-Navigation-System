@@ -1,25 +1,34 @@
 
 public class Vector 
 {
-	private double x;
-	private double y;
-	private double z;
-	public double getX() {
+	private final double x;
+	private final double y;
+	private final double z;
+	public Vector()
+	{
+		this(0,0,0);
+	}
+	public Vector (double init_x, double init_y, double init_z)
+	{
+		x = init_x;
+		y = init_y;
+		z = init_z;
+	}
+	public double getX() 
+	{
 		return x;
 	}
-	public void setX(double x) {
-		this.x = x;
-	}
-	public double getY() {
+	public double getY() 
+	{
 		return y;
 	}
-	public void setY(double y) {
-		this.y = y;
-	}
-	public double getZ() {
+	public double getZ() 
+	{
 		return z;
 	}
-	public void setZ(double z) {
-		this.z = z;
+	public Vector addVector(Vector other)
+	{
+		return new Vector(this.getX() + other.getX(), this.getY() + other.getY(), this.getZ() + other.getZ());
 	}
+	
 }

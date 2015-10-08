@@ -11,10 +11,7 @@ public class Positioner
 	public Positioner (int x, int y, int z)
 	{
 		this();
-		Vector pos = new Vector();
-		pos.setX(x);
-		pos.setY(y);
-		pos.setZ(z);
+		Vector pos = new Vector(x,y,z);
 		currentPosition = pos;
 	}
 	public Positioner (Vector pos)
@@ -29,6 +26,6 @@ public class Positioner
 	public void actOnSample(Vector acceleration, double timeElapsed)
 	{
 		//Change velocity based on vx = v0 + at
-		cur
+		
 	}
 }
